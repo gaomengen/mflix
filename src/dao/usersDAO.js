@@ -64,7 +64,8 @@ export default class UsersDAO {
         name: userInfo.name,
         email: userInfo.email,
         password: userInfo.password,
-       })
+       }, 
+       {w: 2})
       return { success: true }
     } catch (e) {
       if (String(e).startsWith("MongoError: E11000 duplicate key error")) {
